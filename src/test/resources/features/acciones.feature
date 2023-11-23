@@ -10,12 +10,8 @@ Característica: Se realiza una compra de principio a fin
 
   @RutaCritica
     @InteractuarConElementos
-  Esquema del escenario: Se requiere hacer una interaccion con cada elemento
+  Escenario: : Se requiere hacer una interaccion con cada elemento
     Dado que fer verifica la cantidad de veces a ingresar
     Cuando Cuando realiza las interacciones con los elementos
-      | letra   |
-      | <letra> |
-    Entonces Verifica el mensaje: Ha cometido un error, intente de nuevo
-    Ejemplos:
-      | letra |
-      | V     |
+    Entonces Verifica el mensaje: Felicidades, has terminado la prueba exitosamente
+

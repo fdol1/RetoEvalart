@@ -9,13 +9,15 @@ import java.util.List;
 
 public class SeleccionarMultiplo implements Interaction {
 
-    private Target listaOpciones;
-    public SeleccionarMultiplo(Target listaOpciones) {
+    private final Target listaOpciones;
+    private final int multiplo;
+    public SeleccionarMultiplo(Target listaOpciones, int multiplo) {
         this.listaOpciones = listaOpciones;
+        this.multiplo = multiplo;
     }
 
-    public static SeleccionarMultiplo porOpcion(Target listaOpciones) {
-        return new SeleccionarMultiplo(listaOpciones);
+    public static SeleccionarMultiplo porOpcion(Target listaOpciones, int multiplo) {
+        return new SeleccionarMultiplo(listaOpciones, multiplo);
     }
 
     @Override
@@ -25,7 +27,7 @@ public class SeleccionarMultiplo implements Interaction {
 
         for (int i = 0; i < listaOpcines.size(); i++) {
             int numero = Integer.parseInt(listaOpcines.get(i).getText().trim());
-            if(numero % 7 == 0){
+            if(numero % multiplo == 0){
                 listaOpcines.get(i).click();
             }
         }
