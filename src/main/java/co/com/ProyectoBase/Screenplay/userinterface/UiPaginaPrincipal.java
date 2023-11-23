@@ -8,7 +8,7 @@ public class UiPaginaPrincipal {
     public static final Target TXT_TEXTO = Target.the("Campo para ingresar la letra V 290 veces").located(By.xpath("//textarea[@class = 'border-2 border-black rounded-sm p-2 resize-y']"));
     public static final Target LBL_LETRA_CANTIDAD = Target.the("Campo que contiene la cantidad de veces a ingresar la letra").located(By.xpath("//p[@class = 'text-center text-xl'][1]"));
     public static final Target LBL_OPERACION_MATEMATICA = Target.the("Campo con la operacion matematica a realizar").located(By.xpath("//p[@class = 'text-center text-xl font-bold']"));
-    public static final Target LISTA_RESULTADOS = Target.the("Lista con los resultados de la operacion matematica").located(By.xpath("//body[1]/div[2]/form[1]/div[1]/div[3]/div[1]/label"));
+    public static final Target LISTA_RESULTADOS = Target.the("Lista con los resultados de la operacion matematica").located(By.xpath("//body[1]/div[2]/form[1]/div[1]/div[2]/div[1]/label"));
     public static final Target LISTA_RESULTADOS_ITEM = Target.the("Item de la lista").located(By.xpath("//body[1]/div[2]/form[1]/div[1]/div[3]/div[1]/label/input"));
     public static final Target LISTA_MULTIPLOS = Target.the("Lista con numeros para validar si son multiplos de 7").located(By.xpath("//body[1]/div[2]/form[1]/div[1]/div[4]/div[1]/label"));
     public static final Target INPUT_FECHA = Target.the("Campo donde se ingresa la fecha calculada").located(By.xpath("//input[@class = 'border-2 border-black rounded-sm p-2']"));

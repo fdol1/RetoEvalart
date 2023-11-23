@@ -17,14 +17,12 @@ import static co.com.ProyectoBase.Screenplay.util.Utils.encontrarNumerosEnCadena
 
 public class IniciarCiclos implements Task {
 
-
     public IniciarCiclos() {
     }
 
     public static IniciarCiclos enEvalart() {
         return Tasks.instrumented(IniciarCiclos.class);
     }
-
 
     @Override
     public <T extends Actor> void performAs(T actor) {
@@ -43,6 +41,7 @@ public class IniciarCiclos implements Task {
                     texto+= cadena;
                 }
 
+                /*
                 if(decision(Text.of(LBL_FECHA_INICIAL).viewedBy(actor).asString()).equals("desde antes de")){
                      fecha = fechaDesdeAntesDe(String.valueOf(Text.of(LBL_FECHA_INICIAL).viewedBy(actor).asString()),
                             encontrarNumerosEnCadena(String.valueOf(Text.of(LBL_FECHA_INICIAL).viewedBy(actor).asString())));
@@ -52,17 +51,18 @@ public class IniciarCiclos implements Task {
                             encontrarNumerosEnCadena(String.valueOf(Text.of(LBL_FECHA_INICIAL).viewedBy(actor).asString())));
                 }
 
+                 */
 
                 actor.attemptsTo(
                         WaitUntil.the(TXT_TEXTO, WebElementStateMatchers.isVisible()).forNoMoreThan(10).seconds(),
                         Enter.theValue(texto).into(TXT_TEXTO),
-                        Enter.theValue(fecha).into(INPUT_FECHA),
+                        //Enter.theValue(fecha).into(INPUT_FECHA),
                         RealizarOperacion.matematica(),
-                        VerificarMultiplos.conVariables(),
+                        //VerificarMultiplos.conVariables(),
                         Click.on(BTN_ENVIAR)
                 );
             }
         }
-        actor.attemptsTo(FalsaEspera.enPantalla(30000000));
+        actor.attemptsTo(FalsaEspera.enPantalla(5000));
     }
 }

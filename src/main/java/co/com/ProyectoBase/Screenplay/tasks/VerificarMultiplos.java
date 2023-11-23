@@ -1,6 +1,5 @@
 package co.com.ProyectoBase.Screenplay.tasks;
 
-import co.com.ProyectoBase.Screenplay.interactions.FalsaEspera;
 import co.com.ProyectoBase.Screenplay.interactions.Scroll;
 import co.com.ProyectoBase.Screenplay.interactions.SeleccionarMultiplo;
 import net.serenitybdd.screenplay.Actor;
@@ -28,6 +27,5 @@ public class VerificarMultiplos implements Task {
                 Scroll.byPixels(500),
                 SeleccionarMultiplo.porOpcion(LISTA_MULTIPLOS,encontrarNumerosEnCadena(Text.of(LBL_NUMERO_MULTIPLO).viewedBy(actor).asString()))
         );
-
     }
 }

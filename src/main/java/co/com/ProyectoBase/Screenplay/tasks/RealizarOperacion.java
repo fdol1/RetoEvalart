@@ -27,7 +27,7 @@ public class RealizarOperacion implements Task {
 
         long resultado = operar(obtenerExprecion(Text.of(LBL_OPERACION_MATEMATICA).viewedBy(actor).asString()));
         actor.attemptsTo(
-                Scroll.byPixels(500),
+                //Scroll.byPixels(500),
                 SeleccionarResultado.porOpcion(LISTA_RESULTADOS,String.valueOf(resultado))
         );
     }

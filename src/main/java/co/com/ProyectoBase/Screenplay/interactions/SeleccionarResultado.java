@@ -27,7 +27,6 @@ public class SeleccionarResultado implements Interaction {
     public <T extends Actor> void performAs(T actor) {
 
         List<WebElementFacade> listaOpcines = listaOpciones.resolveAllFor(actor);
-        List<WebElementFacade> listaItem = LISTA_RESULTADOS_ITEM.resolveAllFor(actor);
 
         for (int i = 0; i < listaOpcines.size(); i++) {
             if (listaOpcines.get(i).getText().trim().equals(opcion)) {
